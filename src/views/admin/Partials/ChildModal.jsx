@@ -17,7 +17,7 @@ const style = {
   overflow:"hidden"
 };
 
-export function ChildModal({text}) {
+ function ChildModal({text}) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
     setOpen(true);
@@ -56,3 +56,5 @@ export function ChildModal({text}) {
     </React.Fragment>
   );
 }
+
+export default ChildModal

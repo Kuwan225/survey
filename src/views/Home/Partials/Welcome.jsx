@@ -5,7 +5,7 @@ const Welcome = (props) => {
     <div className="w-[80%] bg-gray-300 relative rounded-lg overflow-hidden">
       <img src="/welcome.jpg" alt=""/>
       <div className="relative flex gap-4 mx-4">
-        <label htmlFor="name" className="absolute top-7 left-2 text-gray-500 leading-tight font-[500]">Pengirim :</label>
+        <label htmlFor="name" className="absolute top-6 left-2 text-gray-500 leading-tight font-[500]">Pengirim :</label>
         <input
         id="name"
           className="pl-[86px] mt-4 shadow bg-white appearance-none border rounded w-full h-full py-2 px-3 text-gray-500 font-[500] leading-tight focus:outline-none focus:shadow-outline"

@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
-import Button from "@mui/material/Button";
-import { ChildModal } from "./childModal";
+import ChildModal from "./ChildModal";
 import { useNavigate, useParams } from "react-router-dom";
 import { getDatabase, ref, onValue,child,get } from "firebase/database";
 

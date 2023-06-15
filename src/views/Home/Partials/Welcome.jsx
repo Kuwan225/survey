@@ -17,7 +17,7 @@ const Welcome = (props) => {
         />
         <button
           onClick={() =>props.name.length > 0 ? props.setTask(1):props.setValidation(true)}
-          className={`text-white font-bold h-full py-0 px-4 my-4 border-none  rounded-none rounded-sm text-[.9rem] ${props.name.length > 0 ?'bg-blue-500':'bg-gray-400'}`}
+          className={`text-white font-bold h-full py-0 px-4 my-4 border-none rounded-sm text-[.9rem] ${props.name.length > 0 ?'bg-blue-500':'bg-gray-400'}`}
         >
           START
         </button>

@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import Welcome from "./Partials/Welcome";
 import Card from "../../components/Card";
 import { useState } from "react";
-import soal from "../../data/soal";
 import PopUpError from "../../components/PopUpError";
 import { getDatabase, onValue, ref } from "firebase/database";
 

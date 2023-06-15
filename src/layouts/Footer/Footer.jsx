@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className="w-full bg-blue-800 flex justify-center">
       <p className="flex justify">
-        <Link className="flex items-center mr-2" to="/admin/login" style={{color:"yellow"}}>
+        <Link className="flex items-center mr-2" to="/admin/login-admin" style={{color:"yellow"}}>
           <AiOutlineCopyright className="mr-1"/>
           Wan
         </Link>

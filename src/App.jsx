@@ -1,7 +1,7 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import pages from "./pages";
-import "./app.css";
+import "./App.css";
 import { SnackbarProvider } from "notistack";
 
 const router = createBrowserRouter(pages);

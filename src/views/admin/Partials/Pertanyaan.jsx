@@ -35,7 +35,7 @@ const Pertanyaan = () => {
         {datas.length > 0 ? <>{datas?.map((el,idx)=>{
         return  <CardPertanyaan key={idx} data={el.data} no={idx+1} id={el.id}/>
 
-        })}</>:<p className='text-4xl text-gray-400 text-center' style={{lineHeight:"90vh"}}>Belum ada pertanyaan</p>}
+        })}</>:<p className='text-2xl text-gray-400 text-center' style={{lineHeight:"90vh"}}>Belum ada pertanyaan</p>}
         
       </div>
     </div>

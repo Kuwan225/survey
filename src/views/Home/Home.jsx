@@ -45,7 +45,7 @@ const Home = () => {
 
 
   return (
-    <div className={`relative bg-[rgba(${r},${g},${b},.2)] w-screen min-h-screen flex items-center justify-center py-10`}>
+    <div className={`relative bg-[rgba(${r},${g},${b},.9)] w-screen min-h-screen flex items-center justify-center py-10`}>
       {validation && <PopUpError setValidation={setValidation} label="Wajib Isi..."/>}
       {task == 0 ? (
         <Welcome setTask={setTask} setName={setName} name={name} setValidation={setValidation}/>

@@ -31,7 +31,7 @@ const Jawaban = () => {
         return (
           <CardAdmin key={idx} setOpenModal={setOpenModal} data={el} />
         );
-      })}</>:<p className='text-4xl text-gray-500' style={{lineHeight:"90vh"}}>Belum ada yang jawab</p>}
+      })}</>:<p className='text-4xl text-gray-500' style={{lineHeight:"90vh text-center"}}>Belum ada yang jawab</p>}
       
     </div>
   </div>

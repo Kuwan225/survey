@@ -78,7 +78,7 @@ const Card = (props) => {
               Back
             </button> */}
 
-            <Button klik={handleFinish} style={answer.no == task || pesan.length >0 ? "bg-blue-500" : "bg-gray-400"}>{soal.length > task ? "Next" : "Finnish"}</Button>
+            <Button klik={handleFinish} style={answer.no == task || pesan.length >0 ? "bg-blue-500 mt-4" : "bg-gray-400 mt-4"}>{soal.length > task ? "Next" : "Finnish"}</Button>
           </div>
         </div>
     </div>

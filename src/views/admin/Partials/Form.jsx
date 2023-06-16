@@ -14,8 +14,10 @@ const Form = (props) => {
   const [inputJawaban, setInputJawaban] = useState([]);
 
   const plusHandler = (e) => {
-    e.preventDefault();
-    setInputJawaban([...inputJawaban, Math.random()]);
+    if(pertanyaan.length > 0 && type == "pilihan ganda"){
+      e.preventDefault();
+      setInputJawaban([...inputJawaban, Math.random()]);
+    }
   };
   // get data
 
@@ -75,7 +77,6 @@ const Form = (props) => {
   const filSoal = datas.filter(el=>{
     return el.data.typePg === false
   })
-console.log(filSoal);
 
   return (
     <form className="p-2" onSubmit={saveHandler}>

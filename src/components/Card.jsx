@@ -45,7 +45,7 @@ const Card = (props) => {
           </span>
           <p className="text-white text-center">{dataSoal[0]?.data?.text}</p>
         </div>
-        <div className="w-full bg-white p-4 flex flex-col gap-[10px]">
+        <div className="w-full bg-white p-4 flex flex-col">
           {dataSoal[0]?.data?.typePg === true ?<> {dataSoal[0]?.data?.pilihan.map((el, idx) => {
             return (
               <List

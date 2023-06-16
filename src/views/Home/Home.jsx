@@ -36,7 +36,6 @@ const Home = () => {
   const filSoal = datas.filter((el) => {
     return task == el.data.no;
   });
-  console.log(datas);
   // color
   useEffect(()=>{
     setR(Math.floor(Math.random()*255))
@@ -46,7 +45,7 @@ const Home = () => {
 
 
   return (
-    <div className={`relative bg-[rgba(${r},${g},${b},.2)] w-screen min-h-screen flex items-center justify-center`}>
+    <div className={`relative bg-[rgba(${r},${g},${b},.2)] w-screen min-h-screen flex items-center justify-center py-10`}>
       {validation && <PopUpError setValidation={setValidation} label="Wajib Isi..."/>}
       {task == 0 ? (
         <Welcome setTask={setTask} setName={setName} name={name} setValidation={setValidation}/>

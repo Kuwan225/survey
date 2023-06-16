@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import CardPertanyaan from "./CardPertanyaan";
 import ModalAdd from "./ModalAdd";
 import { getDatabase, onValue, ref } from "firebase/database";
+import Button from "../../../components/Button"
 
 const Pertanyaan = () => {
   const [openModal,setOpenModal] = useState(false)
@@ -27,12 +28,10 @@ const Pertanyaan = () => {
     <div className="w-screen min-h-screen bg-yellow-400 px-2 pb-10">
       <ModalAdd setOpenModal={setOpenModal} openModal={openModal}/>
       <div className="w-full flex justify-end">
-        <button className="mt-4 mb-2 bg-blue-500 font-bold py-1 ml-2" onClick={()=>setOpenModal(true)}>
-          Tambah
-        </button>
+        <Button klik={()=>setOpenModal(true)} style={"bg-blue-500"}>Tambah</Button>
       </div>
 
-      <div className="bg-blue-500 w-full min-h-[90%] rounded-xl p-2">
+      <div className="bg-blue-500 w-full min-h-[90%] rounded-lg mt-2 p-2">
         {datas.length > 0 ? <>{datas?.map((el,idx)=>{
         return  <CardPertanyaan key={idx} data={el.data} no={idx+1} id={el.id}/>
 

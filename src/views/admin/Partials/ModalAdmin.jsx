@@ -29,7 +29,6 @@ const ModalAdmin = (props) => {
   };
 
   const [data, setData] = useState({});
-  console.log(data);
 
   const db = getDatabase();
 
@@ -49,7 +48,6 @@ const ModalAdmin = (props) => {
       setData(snapshot.val());
     });
   }, [id]);
-  console.log(data);
   return (
     <div>
       <Modal

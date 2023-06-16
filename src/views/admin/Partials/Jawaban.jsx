@@ -24,9 +24,9 @@ const Jawaban = () => {
   }, []);
 
   return (
-    <div className=" w-screen h-screen bg-blue-500 pt-[58px] px-2">
+    <div className=" w-screen h-screen bg-blue-500 pt-[45px] px-2">
     <ModalAdmin openModal={openModal} setOpenModal={setOpenModal} />
-    <div className="flex flex-wrap justify-evenly gap-2 bg-yellow-400 min-h-[90%] pt-2 rounded-xl">
+    <div className="flex flex-wrap justify-center gap-2 bg-yellow-400 min-h-[200px] pt-2 rounded-lg">
       {datas.length > 0 ?<> {datas?.map((el, idx) => {
         return (
           <CardAdmin key={idx} setOpenModal={setOpenModal} data={el} />

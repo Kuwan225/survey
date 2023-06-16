@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import List from "./List";
-import soal from "../data/soal";
+import Button from "../components/Button";
 import { useNavigate } from "react-router-dom";
 import {getDatabase,push,ref} from "firebase/database"
 
@@ -21,14 +21,14 @@ const Card = (props) => {
       setValidation(false);
       setTask(task + 1);
     } else if (task == soal.length && pesan.length >0) {
+      setJawaban([...dataJawaban, answer]);
       push(ref(db,"answer"),{
         nama:props.nama,
-        survey:[...dataJawaban,answer],
+        survey:[...dataJawaban],
         pesan,
         isRead:false
       }).then(()=>{
         router("/thank");
-        console.log(dataJawaban);
       }).catch(error=>{
         console.log(error);
       })
@@ -37,7 +37,6 @@ const Card = (props) => {
       console.log("3");
     }
   }
-console.log(dataSoal);
   return (
       <div className="bg-blue-100 text-black w-[80%] shadow-xl rounded-md overflow-hidden">
         <div className="pt-10 relative border-none w-full p-8 h-[50%] bg-blue-500 flex justify-center items-center font-bold text-gray-700">
@@ -46,7 +45,7 @@ console.log(dataSoal);
           </span>
           <p className="text-white text-center">{dataSoal[0]?.data?.text}</p>
         </div>
-        <div className="w-full bg-white p-4 flex flex-col gap-[1px]">
+        <div className="w-full bg-white p-4 flex flex-col gap-[10px]">
           {dataSoal[0]?.data?.typePg === true ?<> {dataSoal[0]?.data?.pilihan.map((el, idx) => {
             return (
               <List
@@ -68,7 +67,7 @@ console.log(dataSoal);
                 bgHurup={idx == checked ? "bg-blue-500" : "bg-gray-400"}
               />
             );
-          })}</> :<textarea className="bg-white p-2 border-2" placeholder="Masukan Pesan :" onChange={(e)=>setPesan(e.target.value)}/>}
+          })}</> :<textarea className="bg-white p-2 border-2 mb-4" placeholder="Masukan Pesan :" onChange={(e)=>setPesan(e.target.value)}/>}
          
           <div className="w-full flex flex-col">
             {/* Next Fitur */}
@@ -79,14 +78,7 @@ console.log(dataSoal);
               Back
             </button> */}
 
-            <button
-              onClick={handleFinish}
-              className={`w-full my-4 border-none text-white ${
-                answer.no == task || pesan.length >0 ? "bg-blue-500" : "bg-gray-400"
-              } rounded-none rounded-sm text-[.9rem]`}
-            >
-              {soal.length > task ? "Next" : "Finnish"}
-            </button>
+            <Button klik={handleFinish} style={answer.no == task || pesan.length >0 ? "bg-blue-500" : "bg-gray-400"}>{soal.length > task ? "Next" : "Finnish"}</Button>
           </div>
         </div>
     </div>

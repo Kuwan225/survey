@@ -20,7 +20,7 @@ const CardAdmin = ({ setOpenModal, data }) => {
   };
   return (
     <div
-      className="relative  rounded-full w-1/4 h-1/4 flex justify-center items-center"
+      className="relative rounded-full w-1/4 h-1/4 flex justify-center items-center"
       onClick={klikHandler}
     >
       {data.data.isRead === true ? (

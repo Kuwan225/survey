@@ -4,13 +4,13 @@ import { AiOutlineCopyright } from "react-icons/ai";
 
 const Footer = () => {
   return (
-    <div className="w-full bg-blue-800 flex justify-center">
+    <div className="w-full bg-blue-500 flex justify-center">
       <p className="flex justify">
-        <Link className="flex items-center mr-2" to="/admin/login" style={{color:"yellow"}}>
+        <Link className="flex items-center mr-2" to="/admin-login" style={{color:"yellow"}}>
           <AiOutlineCopyright className="mr-1"/>
           Wan
         </Link>
-        || Create by Marwan maulana
+        <span className="text-white">|| Create by Marwan maulana</span>
       </p>
     </div>
   );

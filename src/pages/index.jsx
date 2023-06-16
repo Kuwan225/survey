@@ -18,7 +18,7 @@ export default [
         element:thank.element
       },
       {
-        path:"/login-admin",
+        path:"/admin-login",
         element:loginAdmin.element
       },
       {
